@@ -3,8 +3,6 @@ type MaybeEquals<X, Y> = (<T>() => T extends X ? 1 : 2) extends (<T>() => T exte
   ? true
   : false
 
-
-type Includes<T extends readonly any[], U> = T extends [infer M, ...infer R] 
+type Includes<T extends readonly any[], U> = T extends [infer M, ...infer R]
   ? MaybeEquals<U, M> extends true ? true : Includes<R, U>
   : false
-
