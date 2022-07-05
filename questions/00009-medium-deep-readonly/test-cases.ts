@@ -24,7 +24,7 @@ type X = {
         },
       ]
     }
-  },
+  }
 }
 
 type Expected = {
@@ -47,5 +47,5 @@ type Expected = {
         },
       ]
     }
-  },
+  }
 }
