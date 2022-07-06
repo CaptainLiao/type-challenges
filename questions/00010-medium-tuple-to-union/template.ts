@@ -1,1 +1,1 @@
-type TupleToUnion<T> = any
+type TupleToUnion<T extends readonly any[]> = T[number]
