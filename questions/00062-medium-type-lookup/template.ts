@@ -1,1 +1,3 @@
-type LookUp<U, T> = any
+type LookUp<U, T extends string> =  U extends {
+  type: T
+} & infer M ? M : never
