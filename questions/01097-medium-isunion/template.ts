@@ -1,11 +1,10 @@
 type NoneUnion<T, F = T> = (
-  T extends F 
-    ? F extends T ? true : false 
+  T extends F
+    ? F extends T ? true : false
     : never
   )
 
 type IsUnion<T> = NoneUnion<T> extends true ? false : true
-
 
 // IsUnion<string|number>
 // type t = (string extends string|number
@@ -22,4 +21,3 @@ type t2 = NoneUnion<string|number>
 type t3 = NoneUnion<string>
 type t4 = NoneUnion<'a'|'b'|'c'|'d'>
 type t5 = NoneUnion<never>
-
